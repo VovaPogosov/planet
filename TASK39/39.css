@@ -1,0 +1,103 @@
+body{
+margin: 0;
+padding: 0;
+background: url(cosmos.jpg);
+}
+
+.earth{
+width: 450px;
+position: relative;
+z-index: 1;
+padding: 100px;
+animation:linear 400s dvig infinite;
+left: 0;
+top: 2000;
+}
+
+.moon{
+    width: 120px;
+position:absolute ;
+z-index: 0;
+top: 170px;
+left: 170px;
+animation: linear 10s orbit infinite;
+}
+
+
+.red{
+    width: 325px;
+    position: relative;
+    z-index: 1;
+    padding: 100px;
+    animation:linear 400s dvig infinite;
+}    
+
+.blue{
+    width: 80px;
+position:absolute ;
+z-index: 0;
+top: 300px;
+left: 850px;
+animation: linear 8s bluerun infinite;
+    
+}
+
+.black{
+    width: 50px;
+position:absolute ;
+z-index: 0;
+top: 240px;
+left: 950px;
+animation: linear 6s blackrun infinite;
+}
+
+
+
+@keyframes blackrun{
+    0%{width: 50px;}
+24%{z-index: 0;}
+25%{left: 900px;
+    top: 180px;
+    z-index: 2;}
+50%{width: 90px;}
+74%{z-index: 2;}
+75%{top: 525px;
+    left: 900px;
+z-index: 0;}
+100%{width: 50px;
+transform:rotate(360deg);}
+}
+
+@keyframes bluerun{
+    0%{width: 80px;}
+24%{z-index: 0;}
+25%{left: 730px;
+    top: 210px;
+    z-index: 2;}
+50%{width: 90px;}
+74%{z-index: 2;}
+75%{top: 490px;
+    left: 990px;
+z-index: 0;}
+100%{width: 80px;
+transform:rotate(360deg);}
+}
+
+@keyframes orbit{
+    0%{width: 72px;}
+    24%{z-index: 0;}
+    25%{left: 550px;
+        top: 130px;
+        z-index: 2;}
+    50%{width: 128px;}
+    74%{z-index: 2;}
+    75%{top: 300px;
+        left: 0px;
+    z-index: 0;}
+    100%{width: 72px;
+    transform:rotate(360deg);}
+    }
+    
+    @keyframes dvig {
+     100%{transform: rotate(360deg);}
+    }
